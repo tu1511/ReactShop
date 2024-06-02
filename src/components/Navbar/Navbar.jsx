@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   return (
@@ -16,6 +17,7 @@ const Navbar = () => {
               ReactShop
             </a>
           </div>
+
           {/* search bar */}
           <div className="flex justify-between items-center gap-4">
             <div className="relative group hidden sm:block">
@@ -32,6 +34,7 @@ const Navbar = () => {
               top-1/2 -translate-y-1/2 right-3"
               />
             </div>
+
             {/* Order button */}
             <button
               onClick={() => alert("Ordering not available yet!")}
@@ -48,7 +51,11 @@ const Navbar = () => {
               </span>
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
+
             {/* Darkmode Switch */}
+            <div>
+              <DarkMode />
+            </div>
           </div>
         </div>
       </div>
